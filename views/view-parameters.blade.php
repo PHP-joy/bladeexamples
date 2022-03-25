@@ -35,18 +35,19 @@
                 <div class="col-sm-3">
                     <h2>Ficha de empleado</h2>
                     <div class="card">
-                        <img src="assets/img/empleado.jpg" class="card-img-top img-fluid img-thumbnail" alt="foto">
+                        <img src='@asset("assets/img/empleado.jpg")' class="card-img-top img-fluid img-thumbnail" alt="foto">
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Código: {{ $persona->codigo }}</li>
-                                <li class="list-group-item">Nombre: {{ $persona->nombre }}</li>
+                                <li class="list-group-item">Código: {{ $persona->codigo | 'Sin Código' }}</li>
+                                <li class="list-group-item">Nombre: {{ $persona->nombre | strtoupper }}</li>
                                 <li class="list-group-item">Edad: {{ $persona->edad }}</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-9">
-                    <h2>Cursos de Formación ({{count ($cursos) }})</h2>
+                    @set($numCursos = count ($cursos))
+                    <h2>Cursos de Formación ({{ $numCursos }})</h2>
                     <table class="table table-striped">
                         <thead>
                             <tr>

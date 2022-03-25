@@ -34,10 +34,10 @@ $cursos = [$cursoFin1, $cursoCon1, $cursoCon2];
 
 // $cursos = [];
 
-// echo $blade->run('view-parameters', compact('persona', 'cursos'));
+ echo $blade->run('view-parameters', compact('persona', 'cursos'));
 
 // echo $blade->run('view-parameters-2', compact('persona', 'cursos'));
 
-$error = true;
-echo $blade->run('view-parameters-3', compact('persona', 'cursos', 'error'));
+// $error = true;
+// echo $blade->run('view-parameters-3', compact('persona', 'cursos', 'error'));
 
